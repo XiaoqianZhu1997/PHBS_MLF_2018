@@ -20,7 +20,7 @@ Independent Variables:
 2) Amount: Transaction amount, which can be used for example-dependant cost-senstive learning.
 3) V1-V28: the principal components obtained with PCA, which help predict Fraud. They also have been scaled.
 
-Data Processing: 
+Data Processing: (PHBS_MLF_2018/data_preprocessing.ipynb)
 
 ## 4. Model:
 Method: Try KNN/logistic/SVM/RandomForest/bagging/AdaBoost to choose a better model.
