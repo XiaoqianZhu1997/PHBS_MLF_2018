@@ -8,7 +8,7 @@
 ## 2. Background:
 It is important that credit card companies are able to recognize fraudulent credit card transactions so that customers are not charged for items that they did not purchase. Therefore, the project's goal is to identify fraudulent credit card transactions.
 
-## 3. Data set Description (https://www.kaggle.com/mlg-ulb/creditcardfraud):
+## 3. Data set description (https://www.kaggle.com/mlg-ulb/creditcardfraud):
 - The dataset is called "Credit Card Fraud Detection", obtained from Kaggle website.
 - It contains transactions made by credit cards in September 2013 by European cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. However, the dataset is highly unbalanced, the positive class (frauds) account for 0.172% of all transactions. Therefore, we will re-sample the dataset as to offset this imbalance with the hope of arriving at a more robust and fair decision boundary.
 
@@ -19,8 +19,8 @@ It is important that credit card companies are able to recognize fraudulent cred
   2)Amount: Transaction amount, which can be used for example-dependant cost-senstive learning.
   3)V1-V28: the principal components obtained with PCA, which help predict Fraud. They also have been scaled.
 
-## 4. Data Processing: (https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/data_preprocessing.ipynb)
-- We put our Data Processing details under: PHBS_MLF_2018/data_preprocessing.ipynb
+## 4. Data processing: (https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/data_preprocessing.ipynb)
+- We put our Data processing details under: PHBS_MLF_2018/data_preprocessing.ipynb
 - Further research direction: 1) To deal with the outliers of each feature and see their effects on the accuracy rate; 2) To try oversample method and compare the new outcome with that of under sample method.  
 
 ## 5. Model:
