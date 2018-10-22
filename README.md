@@ -1,9 +1,9 @@
 # Proposal_Credit Card Fraud Detection
 ## 1. Team member:
-1701213050 Lei Jiayuan\
-1701213124 Xie Ting\
-1701213135 Yao Huanchen\
-1701213173 Zhu Xiaoqian
+1701213050 [Lei Jiayuan](https://github.com/JiayuanLei)\
+1701213124 [Xie Ting](https://github.com/XieTing1995)\
+1701213135 [Yao Huanchen](https://github.com/HuanchenYao)\
+1701213173 [Zhu Xiaoqian](https://github.com/XiaoqianZhu1997)
 
 ## 2. Background:
 It is important that credit card companies are able to recognize **fraudulent** credit card transactions so that customers are not charged for items that they did not purchase. Therefore, the project's goal is to **identify fraudulent credit card transactions**.
@@ -26,4 +26,4 @@ It is important that credit card companies are able to recognize **fraudulent** 
   2) To try oversample method and compare the new outcome with that of under sample method.  
 
 ## 5. Model:
-Method: Try **KNN/logistic/SVM/RandomForest/bagging/AdaBoost/Tensorflow** to choose a better and appropirate model.
+Method: Try **KNN/logistic/SVM/RandomForest** to choose a better and appropirate model.
