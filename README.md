@@ -22,6 +22,8 @@ It is important that credit card companies are able to recognize **fraudulent** 
 
 ## 4. Data preprocessing:
 - We put our Data preprocessing details under the file [PHBS_MLF_2018/data_preprocessing.ipynb](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/data_preprocessing.ipynb)
+- In this step, we tried undersampling method and oversampling method
+- For each method, we tried different machine learning method to classify the data.
 - **Further research direction**: 
   1) To deal with the outliers of each feature and see their effects on the accuracy rate; 
   2) To try oversample method and compare the new outcome with that of under sample method.  
