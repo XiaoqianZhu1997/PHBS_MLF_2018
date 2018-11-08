@@ -28,15 +28,16 @@ It is important that credit card companies are able to recognize **fraudulent** 
   1) To deal with the outliers of each feature and see their effects on the accuracy rate; 
   2) To try oversample method and compare the new outcome with that of under sample method.  
   
-  [the wrong way](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/imbalanced_data_KFold1.png)
-  [the right way](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/imbalanced_data_KFold2.png)
+  ![the wrong way](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/imbalanced_data_KFold1.png)
+  
+  ![the right way](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/imbalanced_data_KFold2.png)
 
 ## 5. Model:
 Method: Try **KNN/logistic/SVM/RandomForest** to choose a better and appropirate model.
 
-[the confusion matrix](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/LR_confusion_matrix.png)
+![the confusion matrix](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/LR_confusion_matrix.png)
 
-[the precision-recall curve](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/LR_Precision_recall_curve.png)
+![the precision-recall curve](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/LR_Precision_recall_curve.png)
 
 ## **Remark**:In the above processes, we under(over)sampled before doing cross-validation, which means we use the information of whole data, and the spliting into validation set & train set is after using these infos. However, the information from validation set should not used at taht time. So we need to do under(over)smpling during the validation.
 It makes no sense to create instances based on our current minority class and then exclude an instance for validation, pretending we didn’t generate it using data that is still in the training set.
