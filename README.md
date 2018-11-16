@@ -134,7 +134,7 @@ In the test set, the **Logistic Regression** gives us the highest value of recal
 ### 6.2 Improvments:
 However, our method can be improved from these aspect:
 1.  As we've mentioned in part 4, we need do the over(under)sampling during K-fold, and we did define a function to complete this method, but due to some heavy computation(even we set cv=3, it still took a long time to finish). 
-2.  The way wo used to find the "best_parameters" is grid search, but we just list several pais to ask the computer to choose between these lists. And we tried grid search repeatedly, we found that those results can be different in each operation. I was guessing that this fact is related to what we did just find the local optimal parasms rather than global optimal, so it will exist small difference in multiple trials.
+2.  The way wo used to find the "best_parameters" is grid search, but we just list several pairs to ask the computer to choose between these lists. And we tried grid search repeatedly, we found that those results can be different in each operation. I was guessing that this fact is related to what we did just find the local optimal parasms rather than global optimal, so it will exist small difference in multiple trials.
 3.  For the metric part, we can see that with different threshold, the precision-recall curve of KNN didn't change too much. 
 
 
