@@ -28,11 +28,14 @@ It is important that credit card companies are able to recognize **fraudulent** 
   1) To deal with the outliers of each feature and see their effects on the accuracy rate; 
   2) To try oversample method and compare the new outcome with that of under sample method.  
   
-  ![the wrong way](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/imbalanced_data_KFold1.png)
+**Here are something worth to mentioned:**
+- Firstly, the testing process should use the original data, test sets should be as representative as the "true" distribution as possible.
+- The second thing is that, until now, we were doing balancing the data before Grid search cross-validation to choose (hyper)parameters. However, this method can be problematic. Over(Under)-sampling before performing the K-fold split introudces identical samples in the training and test sets for each fold, which lead to an overestimate of model performance. And this [blog post](https://www.marcoaltini.com/blog/dealing-with-imbalanced-data-undersampling-oversampling-and-proper-cross-validation) gives a nice explanation. 
+- Actually, over(under)-sample before cross-validation means we use the information of whole data, and the spliting into validation set & train set is after using these infos. However, the information from validation set should not used at taht time. So we need to do under(over)smpling during the validation.
+- Here are two figures we scratch from that blog post to visualize the problem
   
-  ## **Remark**:
-In the above processes, we under(over)sampled before doing cross-validation, which means we use the information of whole data, and the spliting into validation set & train set is after using these infos. However, the information from validation set should not used at taht time. So we need to do under(over)smpling during the validation.
-It makes no sense to create instances based on our current minority class and then exclude an instance for validation, pretending we didn’t generate it using data that is still in the training set.
+  
+  ![the wrong way](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/imbalanced_data_KFold1.png)
 
   
   ![the right way](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/imbalanced_data_KFold2.png)
