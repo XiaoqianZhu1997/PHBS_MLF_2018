@@ -51,12 +51,15 @@ Method: We mainly try **LogisticRegression/KNN/SVM/DecisionTree/RandomForest** t
 And in this part, we give the Condusion matrix and precision-recall curve figures of each models.
 
 **The reason that we don't use ROC curve is that:**
-  With imbalanced data, we've got a large number in Negative class, due to this large number, the increase of FPR is hard to observe. This will lead to (ROC curve) an over-optimistic estimation.
-  In ROC curve, the x-axis is FPR = FP/N = FP/(FP+TN). In our case, num(N) >> num(P), a huge increase in FP can only bring small change in FPR. While the result is that a lot of Negative case was misclassified as Positive, but we cannont observe from ROC curve.
-  We can use an numerical example to illustrate this problem, suppose a dataset with Postive case (num=20) and Negative case(num=10000). At the begin, there are 20 Negative cases was misclassified.
-  Then FPR = 20/(20+9980) = 0.002, while if 20 Negative cases wa misclassified agian.
+- With imbalanced data, we've got a large number in Negative class, due to this large number, the increase of FPR is hard to observe. This will lead to (ROC curve) an over-optimistic estimation.
+- In ROC curve, the x-axis is FPR = FP/N = FP/(FP+TN). In our case, num(N) >> num(P), a huge increase in FP can only bring small change in FPR. While the result is that a lot of Negative case was misclassified as Positive, but we cannont observe from ROC curve.
+
+We can use an numerical example to illustrate this problem, suppose a dataset with Postive case (num=20) and Negative case(num=10000). At the begin, there are 20 Negative cases was misclassified.
+  
+Then FPR = 20/(20+9980) = 0.002, while if 20 Negative cases wa misclassified agian.
   FPR_2 = 40/(40+9960) = 0.004.
-  In ROC curve, this is just a tiny change. But the precision will change from 0.5 to 0.33, there will be a dramaticlly decrase in in the precision-recall curve.
+
+In ROC curve, this is just a tiny change. But the precision will change from 0.5 to 0.33, there will be a dramaticlly decrase in in the precision-recall curve.
 
 ### 5.1 **Logistic Regression**
 Under this method, we first use grid search to find the best (hyper)parameter. We find that {'C': 0.01, 'penalty': 'l1'} is the best parameter. Therefore, we use this parameter to define the confusion matrix and plot the precision-recall curve.
@@ -85,6 +88,7 @@ Under this method, we find that the best parameters for using Surpport Vector Cl
 ![](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/CM_SVM.png)
 
   2. Precision-recall curve:
+  
 ![](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/curve_SVM.png)
 
 ### 5.4 **Decision Tree**
@@ -95,6 +99,7 @@ We get the confusion matrix and precision-recall curve as follows.
 ![](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/CM_DT.png)
 
   2. Precision-recall curve:
+  
 ![](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/curve_DT.png)
 
 
@@ -106,6 +111,7 @@ We get the confusion matrix and precision-recall curve as follows.
 ![](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/CM_RF.png)
 
   2. Precision-recall curve:
+  
 ![](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/curve_RF.png)
 
 
