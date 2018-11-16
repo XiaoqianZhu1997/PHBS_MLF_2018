@@ -34,7 +34,7 @@ It is important that credit card companies are able to recognize **fraudulent** 
 - Actually, over(under)-sample before cross-validation means we use the information of whole data, and the spliting into validation set & train set is after using these infos. However, the information from validation set should not used at taht time. So we need to do under(over)smpling during the validation.
 - Here are two figures we scratch from that blog post to visualize the problem:
   
-  1.The wrong way:
+  1. The wrong way:
   ![the wrong way](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/imbalanced_data_KFold1.png)
 
   2. The right way:
@@ -42,14 +42,14 @@ It is important that credit card companies are able to recognize **fraudulent** 
 
 ## 5. Model:
 Method: We mainly try **LogisticRegression/KNN/SVM/DecisionTree/RandomForest** to choose a better and appropirate model.
-**Logistic Regression**
+### 5.1 **Logistic Regression**
 Under this method, we first use grid search to find the best (hyper)parameter. We find that {C=0.01, penalty=l1} is the best parameter. Therefore, we use this parameter to define the confusion matrix and plot the precision-recall curve.
 
 ![the confusion matrix](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/LR.png)
 
 ![the precision-recall curve](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/LR_prec.png)
 
-**KNN**
+### 5.2 **KNN**
 Under this method, we first determine the range of KNN's k. As 1-NN always gives 100% train accuracy, so we excluded it out. And this is a binary case, we thought it's better to not use an even number like 2, then we exluded 2-NN out too. Therefore, the range starts from 3. We find that the best parameters for using KNN is {'algorithm': 'auto', 'n_neighbors': 4}. 
 We get the confusion matrix and precision-recall curve as follows.
 
@@ -57,11 +57,11 @@ We get the confusion matrix and precision-recall curve as follows.
 
 ![the precision-recall curve](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/KNN_prec.png)
 
-**SVM**
+### 5.3 **SVM**
 Under this method, we find that the best parameters for using Surpport Vector Classifier is {'C': 3, 'kernel': 'rbf'}.
 However, when defining confusion matrix, we have met a problem.
 
-**Decision Tree**
+### 5.4 **Decision Tree**
 By using grid search, we find the best parameter for Decision tree Classifier is {'criterion': 'entropy', 'max_depth': 6, 'min_samples_leaf': 6}. 
 We get the confusion matrix and precision-recall curve as follows.
 
@@ -70,7 +70,7 @@ We get the confusion matrix and precision-recall curve as follows.
 ![the precision-recall curve](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/DT_prec.png)
 
 
-**Random Forest**
+### 5.5 **Random Forest**
 Under this method, The best parameter is {'max_features': 3, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 100}.
 We get the confusion matrix and precision-recall curve as follows.
 
