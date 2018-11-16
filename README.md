@@ -22,8 +22,9 @@ It is important that credit card companies are able to recognize **fraudulent** 
 
 ## 4. Data preprocessing:
 - We put our Data preprocessing details under the file [PHBS_MLF_2018/data_preprocessing.ipynb](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/data_preprocessing.ipynb)
-- In this step, we tried undersampling method and oversampling method
-- For each method, we tried different machine learning method to classify the data.
+- In this step, we tried undersampling method and oversampling method.
+- After resampling, we use grid search cross-validation to find optimal (hyper)parameters and substitue those params into our prediction model.
+The detailed (hyper)parameters that are treated as best parameters can be found in the [Third Part](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/ml_projec_v5.ipynb).
 - **Further research direction**: 
   1) To deal with the outliers of each feature and see their effects on the accuracy rate; 
   2) To try oversample method and compare the new outcome with that of under sample method.  
@@ -39,6 +40,9 @@ It is important that credit card companies are able to recognize **fraudulent** 
 
   2. The right way:
   ![the right way](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/imbalanced_data_KFold2.png)
+ 
+ 
+ - So, we need to improve the way that we find the best parameters. In our notebook, we define a helper function to accomplish this thread, which can be found in the [Fourth Part](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/ml_projec_v5.ipynb).
 
 ## 5. Model:
 Method: We mainly try **LogisticRegression/KNN/SVM/DecisionTree/RandomForest** to choose a better and appropirate model.
@@ -77,5 +81,10 @@ We get the confusion matrix and precision-recall curve as follows.
 ![the confusion matrix](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/RF.png)
 
 ![the precision-recall curve](https://github.com/XiaoqianZhu1997/PHBS_MLF_2018/blob/master/image/RF_prec.png)
+
+
+## 6. Conclusion and improvement:
+### 6.1 Conclusions:
+
 
 
